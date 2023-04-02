@@ -1,7 +1,12 @@
 
-// Flows through some colors of RGB
+// program written by https://github.com/maroulakion
 
-// find me on https://github.com/maroulakion
+// LED FLOWING THROUGH SOME COLORS OF RGB
+// Hardware needed: Arduino microcontroller (eg. Arduino UNO R3)
+//                  Breadboard
+//                  Resistors (330 Ohm)
+//                  Jumper wires
+//                  RGB LED (4 leg-LED: 3 for RGB colors, and 1 for ground)
 
 //RGB LED pins, representing RGB Colors 
 const int RED = 8;
@@ -34,6 +39,8 @@ void setRGB(int R, int G, int B) {
 }
 
 void changeRGBorder(int R, int G, int B) {
+  // jumping for color to color changing in a way the human eye
+  // can see the difference
   for (R = 14; R < 255; R = R + 30) {
     for (G = 14; G < 255; G = G + 40) {
       for (B = 24; B < 255; B = B + 45) {
