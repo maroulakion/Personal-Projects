@@ -7,6 +7,7 @@
 // SPIN DC MOTOR to max value when a button is pressed
 // Control speed of motor using a transistor
 // Hardware needed: Arduino microcontroller (eg. Arduino UNO R3)
+//                  Breadboard
 //                  Jumper Wires
 //                  Button 
 //                  Transistor 
