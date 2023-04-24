@@ -1,0 +1,4 @@
+HTML CSS JAVASCRIPT TEXT FILE
+
+In this folder I have some small projects I've made using Web programming languages, like HTML, CSS, Javascript. 
+Have fun!
