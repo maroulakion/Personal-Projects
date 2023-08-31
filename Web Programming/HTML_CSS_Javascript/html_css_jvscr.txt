@@ -2,3 +2,5 @@ HTML CSS JAVASCRIPT TEXT FILE
 
 In this folder I have some small projects I've made using Web programming languages, like HTML, CSS, Javascript. 
 Have fun!
+
+PS: Download the "assets" folder if you want images, audio and video to be available to you <3
