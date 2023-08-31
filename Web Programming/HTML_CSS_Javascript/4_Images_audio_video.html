@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Practicing Web Programming languages</h1>
+    <h5>Inspired by the 1-hour <a href="https://www.youtube.com/watch?v=HD13eq_Pmp8" target="_blank">video</a>.</h5>
+    <br><br>
+    <hr><hr><hr><h1>~Part 4: Images, audio and video~</h1><hr><hr><hr>
+    <br><br>
+    <hr><h2>Auto-importing basic html file</h2><hr>
+    <p>Type "!" + hit "Enter" to import auto html basis (works on VS-code).</p>
+    <p>Type "lorem" + hit "Enter" to import the main lorem ipsum text (works on VS-code).</p>
+    <hr>
+    
+    <!--IMAGES-->
+    <hr><h2>Importing images</h2><hr>
+    <h4>Adding an image</h4> <ul>
+    <li>This is free image from Pixabay (saved on subfolder):
+        <img src="assets/dragons_flying.jpg"></li>
+    <li>...Re-adjust size with "width" and "height":</li>
+        <img src="assets/dragons_flying.jpg" width="400" height="250">
+    <li>...Helping the SEO machine with "alt", and adding a "title" when mouse hovers over image:</li>
+        <img src="assets/dragons_flying.jpg" width="400" height="250" alt="Dragons flying in sunset" title="Game of Thrones' inpsired images">
+    </ul>
+
+    <h4>Connecting image with URL</h4> <ul>
+    <li>When image clicked, open URL:</li>
+        <a href="https://www.hbo.com/game-of-thrones">
+        <img src="assets/dragons_flying.jpg" width="400" height="250" alt="Dragons flying in sunset" title="Click me!">
+        </a></ul>
+    <hr><hr> <br>
+    
+    <!--AUDIO-->
+    <hr><h2>Importing audio</h2><hr>
+    <h4>Adding audio</h4> <ul>
+    <li>Audio from Youtube library (saved on subfolder). It uses the "controls" attribute to play, pause, and adjust volume and speed. Try it!: <br>
+        <audio controls src="assets/Old World Saga - Hanu Dixit.mp3"></li>
+    <li>Same audio, with "muted" and "controls" attributes, the default (when page loads) of music is muted but plays when Play button is pressed: <br>
+        <audio controls muted src="assets/Old World Saga - Hanu Dixit.mp3"></li>
+    <li>This audio uses the "loop" and "controls" attributes, so when press to play and finishes, it restarts (until pause is hit): <br>
+        <audio loop controls src="assets/Old World Saga - Hanu Dixit.mp3" type="audio/mpeg"></li>
+    <li>The attribute "autoplay" starts music when page loads. It can be combined with "loop" to always keep playing on background.</li></ul>
+    
+    <h4>Error catching on audio</h4> <ul>
+    <li>In case browser doesn't support this audio format, don't make the audio tag as self-closing, and add a source tag with error message in it. 
+        In this, you can also try other back-up audios in cases the primary fails.
+        If you can see/play this audio with no problem, your browser support its format.</li>
+    <audio controls>
+        <source src="assets/Old World Saga - Hanu Dixit.mp3" type="audio/mpeg">
+        <source src="assets/Old World Saga - Hanu Dixit.wav">
+        Your browser doesn't support this audio element.
+    </audio></ul>
+    <hr><hr> <br>
+
+    <!--VIDEOS-->
+    <hr><h2>Importing videos</h2><hr>
+    <h4>Adding video</h4> <ul>
+    <li>Video from ShutterStock (saved on subfolder). It uses the "loop" and "controls" attributes to play, pause, and adjust volume and speed. When finished, it automatically restarts. Try it!: <br>
+        <video controls autoplay src="assets/dragon_screaming.mp4"></li>
+    <li>Of course, the attributes "muted", "autoplay" can also be used.</li>
+    <li>...Re-adjust size with "width" and "height":<br>
+        <video muted autoplay loop controls src="assets/dragon_screaming.mp4" width="200" height="130"></li></ul>
+    
+    <h4>Error catching on audio</h4> <ul>
+    <li>In case browser doesn't support this video format, don't make the video tag as self-closing, and add a source tag with error message in it. 
+        In this, you can also try other back-up videos in cases the primary fails.
+        If you can see/play this audio with no problem, your browser support its format.</li><br>
+    <video controls width="200" height="130">
+        <source src="assets/dragon_screaming.mp4">
+        <source src="assets/dragon_screaming.WebM">
+        Your browser doesn't support this video element.
+    </video></ul>
+    <hr><hr> <br>
+
+</body>
+</html>
+
+
+

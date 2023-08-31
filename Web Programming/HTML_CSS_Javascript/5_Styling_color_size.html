@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            color:blueviolet;
+            background-color: white;
+        }
+        h2, h3, h4 {
+            color: #34f221
+        }
+        p {
+            color:aqua;
+        }
+        hr {
+            border-color:rgb(255, 204, 0);
+            border-width: 3px; 
+            border-color: rgb(27, 27, 221);
+        }
+        a {
+            background-color: rgb(155, 11, 69);
+            color: olivedrab;
+            font-size: 18px;
+            
+        }
+    </style>
+</head>
+<body style="background:lightcoral;">
+    <h1>Practicing Web Programming languages</h1>
+    <h5>Inspired by the 1-hour <a href="https://www.youtube.com/watch?v=HD13eq_Pmp8" target="_blank">video</a>.</h5>
+    <br><br>
+    <hr><hr><hr><h1>~Part 5: Styling, color and size~</h1><hr><hr><hr>
+    <br><br>
+    <hr><h2>Auto-importing basic html file</h2><hr>
+    <p>Type "!" + hit "Enter" to import auto html basis (works on VS-code).</p>
+    <p>Type "lorem" + hit "Enter" to import the main lorem ipsum text (works on VS-code).</p>
+    <hr>
+
+    <!--COLORING-->
+    <hr><h2>Coloring</h2><hr>
+    <h4>Add base colors on style - head</h4>
+    <p>It is encouraged to apply base page styling (for each tag set alignment, border size, padding, etc or even width, etch) <br>
+        in the begging of the HTML document. <br>
+        Do so by using the &lt;style&gt; element on the top (somewhere inside the &lt;head&gt;).
+    </p>
+    
+    <h4>In-line style command</h4>
+    <p>You can also add specific styling for specific elements, by adding the style=... after the tag key-word. <br>
+       If the element has a general instruction (from style in head section) but later it gets an in-line style command, <br>
+       then it keep the in-line (more specific/ exception) styling). Exaple:</p>
+
+    <h5 style="background-color: antiquewhite;">A list</h5> <ul>
+    <li>pipi</li>  
+    <li style="background-color: crimson;">papa</li>
+    <li style="color: darkslateblue;">popo</li> </ul>
+    <hr><hr> <br>
+    
+    <!--SIZING-->
+    <hr><h2>Sizing</h2><hr>
+    <h4>Add base colors on style - head</h4>
+    <p>It is encouraged to apply base page styling (for each tag set alignment, border size, padding, etc or even width, etch) <br>
+        in the begging of the HTML document to set sizes. <br>
+        Do so by using the &lt;style&gt; element on the top (somewhere inside the &lt;head&gt;) <br>
+        besides the coloring.
+    </p>
+
+    <h4>In-line style command</h4>
+    <p>You can also add specific styling for specific elements, by adding the style=... after the tag key-word. <br>
+       If the element has a general instruction (from style in head section) but later it gets an in-line style command, <br>
+       then it keep the in-line (more specific/ exception) styling. Exaple:</p>
+    <p>This an AI <a href="https://www.deepl.com/translator#en/el/bookend" style="font-size:28px">Translation Site</a>.</p>
+    
+    <hr><hr> <br>
+    
+    <!--LOREM IPSUM-->
+    
+    <hr><h2>More speciific styling<sub>(lorem ipsum exaple)</sub></h2><hr>
+    
+    <p>Using &lt;style&gt; and some CSS, except from coloring and sizing, you can change letter-spacing, word-spacing, etc.
+        You can also apply &lt;style&gt; on &lt;hr&gt;, &lt;table&gt;, etc 
+        to manage border thickeness, coloring, sizing, etc.</p>
+
+    <p style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Eveniet ad repellendus repellat beatae adipisci. 
+        Laboriosam molestiae illum delectus voluptatem officia nisi minima rem cumque doloribus explicabo. 
+        Incidunt aut illo qui!</p>
+
+    <hr style="border-color:green; border-width: 5px; border-color:red;"> <br>
+
+    <p>And now, lorem ipsum with some specific styling...</p>
+
+    <div style="color: black">
+    <b><big>Lorem ipsum</big></b> dolor sit amet, consectetur adipisicing elit. <br>
+        Minus eum dignissimos mollitia autem <u style="color: rgb(255, 204, 0)">expedita</u> 
+        et eaque optio <br>
+        <span style="letter-spacing: 3px;">tempora quisquam velit culpa a, <br>
+        <span style="text-decoration: underline;">dolorum voluptate</span>, </span><br>
+        <span style="word-spacing: 20px;">ullam vero quod, distinctio eius voluptas?</span>
+    </div>
+
+    
+
+    <hr><hr> <br>
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #submitButton{
+            color: white;
+            background-color: #534848;
+            border-radius: 8px;
+            width: 100%;
+            height: 50px; 
+        }
+
+        #topOfPage {
+            font-style:italic;
+            background-image: url("./assets/many_dragons_sunset.jpeg");
+            color:#d8cfcf;
+            width:100%;
+            height: 200px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .innerSection {
+            font-style:italic;
+            color:rgb(8, 90, 8);
+            background-color: #d8cfcf;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--FORM EXAPMPLE-->
+    <hr><hr> <br>
+    <div id="topOfPage">
+        <h2>RENT A DRAGON</h2> 
+    </div>
+    <br>
+    <hr><hr> <br>
+
+    <form action="rental_confirmation.php" method="POST">
+
+        <!--PERSONAL DATA-->
+        <h3 style="font-style: italic;">Rider's personal data</h3> <hr>
+        <div class="innerSection">
+            
+            <div>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Daenarys" required>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Targaryen" required>    
+            </div> <br>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="danny@got.com" required>
+            </div> <br>
+        
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="8" required>
+            </div> <br>
+        
+            <div>
+                <label for="license">Are you a proffesional dragon rider?</label>
+                <input type="text" id="license" name="license" required>
+            </div> <br>
+    
+            <div>
+                <label for="XP">Your experience in dragon riding:</label>
+                <select id="XP" name="XP">
+                    <option value="Never">Never ride before</option>
+                    <option value="1_3">1-3 rides before</option>
+                    <option value="4_10">4-10 rides before</option>
+                    <option value="10plus">10+ rides</option>
+                </select>
+            </div> <br>
+        
+            <div>
+                <label for="BeginDate">First day of rental:</label>
+                <input type="date" id="BeginDate" name="BeginDate" required> <br>
+                <label for="EndDate">Last day of rental:</label>
+                <input type="date" id="LastDate" name="LastDate" required>
+            </div> <br>
+
+            <div>
+                <label for="reason">Shortly explain the reason you want to rent a dragon:</label> <br>
+                <textarea id="reason" name="reason" rows="4" cols="50" placeholder="Enter your intentions here."></textarea>
+            </div> <br>
+        </div>
+
+
+        <!--DOCUMENTATION-->
+        <h3 style="font-style:italic;">Documentation</h3> <hr>
+        <div class="innerSection"> 
+            <label for="pdfFile">Upload ID <sub>(acc: .pdf, .jpg, .png)</sub>:</label>
+            <input type="file" id="pdfFile" name="pdfFile" accept=".pdf, .jpg, .png">  <br><br>
+            <label for="pdfFile">Upload certification of dragon riding skills <sub>(acc: .pdf)</sub>:</label>
+            <input type="file" id="pdfFile" name="pdfFile" accept=".pdf">
+        </div> <br>
+        
+
+        <!--PICK YOUR RENTED OBJECT-->
+        <h3 style="font-style: italic;">Select your dragon</h3> <hr>
+        <div class="innerSection">
+            <div>
+                <label for="dragon">Preferred Dragon Type:</label> <br><br>
+                <div class="image-radio">
+                    <label>
+                        <input type="radio" name="dragon" value="fire">
+                        Fire dragon <br>
+                        <img src="assets/fire_dragon.jpeg" alt="Fire Dragon">
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="dragon" value="ice">
+                        Ice dragon <br>
+                        <img src="assets/ice_dragon.jpeg" alt="Ice Dragon">
+                    </label> <br>
+                </div>
+                <div class="image-radio">
+                    <label>
+                        <input type="radio" name="dragon" value="water">
+                        Water dragon <br>
+                        <img src="assets/water_dragon.jpeg" alt="Water Dragon">
+                    </label> <br>
+                    <label>
+                        <input type="radio" name="dragon" value="earth">
+                        Earth dragon <br>
+                        <img src="assets/earth_dragon.jpeg" alt="Earth Dragon">
+                    </label> <br>
+                </div>
+            </div>
+            
+        </div> <br>
+
+
+        <!--PAYMENT-->
+        <h3 style="font-style: italic;">Payment</h3> <hr>
+        <div class="innerSection">
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="visa">Dragon money</option>
+                <option value="visa">Real cash (on rental day)</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+            </select>
+        </div> <br>
+    
+
+        <!--CONSENT AND RESPONSIBILITY TAKING-->
+        <h3 style="color:black;">Consent and Responsibility taking</h3> <hr>
+        <div style="font-style:italic; color:rgb(3, 3, 160);">
+            <label for="consent">I consent to not harm by any mean the rented dragon:</label>
+            <input type="checkbox" id="noHarm" name="noHarm" required> <br>
+            <label for="consent">I consent to take Responsibility for any Accidents occuring to me or my fellow people:</label>
+            <input type="checkbox" id="consent" name="consent" required> <br>
+            <label for="subscribe">(optional) I consent to receive dragon updates:</label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="1">
+        </div> <br>
+        
+
+        <!--RESET AND SUBMIT BUTTONS-->
+        <div>
+            <hr><hr> <br><br>
+            <input type="reset" value="Reset" style="width:30%; background-color: rgb(140, 129, 129); color:white;"><br><br>
+            <input type="submit" value="S U B M I T" id="submitButton">
+        </div> <br>
+    
+    </form>
+    
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

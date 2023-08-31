@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          border: 5px solid palevioletred;
+        }
+        th, td {
+          border: 1px solid blue;
+          padding: 8px;
+          text-align: center;
+        }
+      </style>
+</head>
+<body>
+    <h1>Practicing Web Programming languages</h1>
+    <h5>Inspired by the 1-hour <a href="https://www.youtube.com/watch?v=HD13eq_Pmp8" target="_blank">video</a>.</h5>
+    <br><br>
+    <hr><hr><hr><h1>~Part 6: Tables~</h1><hr><hr><hr>
+    <br><br>
+    <hr><h2>Auto-importing basic html file</h2><hr>
+    <p>Type "!" + hit "Enter" to import auto html basis (works on VS-code).</p>
+    <p>Type "lorem" + hit "Enter" to import the main lorem ipsum text (works on VS-code).</p>
+    <hr>
+
+    <hr><h2>Tables</h2><hr>
+
+    <h4>Create default table styling with CSS</h4>
+    <p>It is strongly encouraged to set some default styling for table in a &lt;style&gt; element on the top (somewhere inside the &lt;head&gt;).
+       For exaple, it is encouraged to set alignment, border size, padding, etc or even width. <br>
+       In this HTML file, CSS is applied that way on &lt;table&gt; and &lt;th, td&gt; elements.
+    </p>
+
+    <h4>Simple table - 2 rows <sub>(no styling)</sub></h4>
+    <p>A table in HTML is basically many rows one of top of the other. 
+        So when creating one, you need to fill it row by row. <br>
+        First, each row is included in &lt;tr&gt; (table row) tag. <br>
+        Inside, we can add &lt;th&gt; (table header) elements if the cell works like title, <br>
+        or &lt;td&gt; (table data) if the cell holds actual information.  
+    </p>
+    <table>
+        <tr>
+            <th>Sports UC</th>
+            <th>Bort</th>
+            <th>Atheletica FC</th>
+            <th>Anthermud</th>
+            <th>Abligheesh</th>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>58</td>
+            <td>41</td>
+            <td>67</td>
+            <td>17</td>
+        </tr>
+    </table>
+    
+    <h4>Simple table - 2 rows <sub>(color styled)</sub></h4>
+    <p>Same table, but with color on headers and on data.
+    </p>
+    <table bgcolor="lightblue">
+        <tr bgcolor="pink">
+            <th>Sports UC</th>
+            <th>Bort</th>
+            <th bgcolor="red">Atheletica FC</th>
+            <th>Anthermud</th>
+            <th>Abligheesh</th>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>58</td>
+            <td>41</td>
+            <td bgcolor="brown">67</td>
+            <td>17</td>
+        </tr>
+    </table>
+
+    <h4>Simple table - 2 rows <sub>(size, text alignment styled)</sub></h4>
+    <p>Same table, but with changes in size of cells and text alignment. <br>
+       Text alignment can be implemented only on &lt;th&gt; and &lt;td&gt; (meaning not &lt;tr&gt; and not &lt;table&gt;).
+    </p>
+    <table bgcolor="lightblue">
+        <tr bgcolor="pink">
+            <th style="text-align:left">Sports UC</th>
+            <th>Bort</th>
+            <th bgcolor="red">Atheletica FC</th>
+            <th >Anthermud</th>
+            <th>Abligheesh</th>
+        </tr>
+        <tr>
+            <td width="250">34</td>
+            <td>58</td>
+            <td style="text-align: right;">41</td>
+            <td bgcolor="brown">67</td>
+            <td style="text-align:left">17</td>
+        </tr>
+    </table> 
+
+    <h4>Multi-rows tables<sub>(styled)</sub></h4>
+    <p>Table with more rows (in which, every one has a header and multi data cells). <br>
+        Style included. 
+    </p>
+
+    <table bgcolor="lightgreen" width="800">
+    <tr bgcolor="orange" align="center">
+        <th bgcolor="red">(row,col)</th>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
+        <th>Column 5</th>
+        <th>Column 6</th>
+    </tr>
+    <tr bgcolor="pink" text-align="center">
+        <th bgcolor="yellow">Row 1</th>
+        <td>(1, 1)</td>
+        <td>(1, 2)</td>
+        <td>(1, 3)</td>
+        <td>(1, 4)</td>
+        <td>(1, 5)</td>
+        <td>(1, 6)</td>
+    </tr>
+    <tr >
+        <th bgcolor="yellow">Row 2</th>
+        <td>(2, 1)</td>
+        <td style="text-align: left;">(2, 2)</td>
+        <td>(2, 3)</td>
+        <td style="text-align: left;">(2, 4)</td>
+        <td>(2, 5)</td>
+        <td>(2, 6)</td>
+    </tr>
+    <tr align="right">
+        <th bgcolor="yellow">Row 3</th>
+        <td>(3, 1)</td>
+        <td>(3, 2)</td>
+        <td>(3, 3)</td>
+        <td bgcolor="green">(3, 4)</td>
+        <td>(3, 5)</td>
+        <td>(3, 6)</td>
+    </tr>
+    <tr>
+        <th style="text-align: right;">Row 4</th>
+        <td style="text-align: right;">(4, 1)</td>
+        <td>(4, 2)</td>
+        <td>(4, 3)</td>
+        <td>(4, 4)</td>
+        <td>(4, 5)</td>
+        <td>(4, 6)</td>
+    </tr>
+    </table>
+
+<hr><hr> <br>
+
+</body>
+
+</html>
+
+
+

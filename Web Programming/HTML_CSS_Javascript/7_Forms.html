@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        input[required]:invalid,
+        textarea[required]:invalid,
+        select[required]:invalid {
+        color: red; 
+        }
+
+        #submitButton{
+            color: white;
+            background-color: #534848;
+            border-radius: 8px;
+            width: 100%;
+            height: 50px; 
+        }
+
+        .description {
+            font-style:italic;
+            color:#443d3d;
+        }
+
+        .code {
+            font-style:italic;
+            color:rgb(8, 90, 8);
+            background-color: #d8cfcf;
+        }
+    </style>
+</head>
+<body>
+    <h1>Practicing Web Programming languages</h1>
+    <h5>Inspired by the 1-hour <a href="https://www.youtube.com/watch?v=HD13eq_Pmp8" target="_blank">video</a>.</h5>
+    <br><br>
+    <hr><hr><hr><h1>~Part 7: Forms~</h1><hr><hr><hr>
+    <br><br>
+    <hr><h2>Auto-importing basic html file</h2><hr>
+    <p>Type "!" + hit "Enter" to import auto html basis (works on VS-code).</p>
+    <p>Type "lorem" + hit "Enter" to import the main lorem ipsum text (works on VS-code).</p>
+    <hr>
+
+    <hr><h2>Form</h2><hr>
+
+    <h4>Label fields</h4> 
+    <p class="description">Text to explain information wanted in fields. </p>
+    <ul class="code">
+    <li>&lt;label for=&quot;codeNameLabel&quot; &gt; LabelNameSOnSite &lt;/label&gt;</li>  
+    </ul>
+
+    <h4>Input fields</h4> 
+    <p class="description">Self closing argument for a variety of input fields. </p><ul>
+    <li class="description">For text input<ul class="code">
+        <li>&lt;input type="text" id="fname" name="fname"&gt;</li> 
+        <li>&lt;input type="text" id="fname" name="fname" placeholder="Jon"&gt;</li>  
+        <li>&lt;input type="text" id="fname" name="fname" placeholder="Jon" required&gt;</li></ul></li>
+    <li class="description">For numerical input<ul class="code">
+        <li>&lt;input type="number" id="age" name="age"&gt;</li>
+        <li>&lt;input type="number" id="age" name="age" required&gt;</li>
+        <li>&lt;input type="number" id="age" name="age" min="18" required&gt;</li></ul></li> 
+    <li class="description">For date <ul class="code">
+        <li>&lt;input type="date" id="Date" name="Date"&gt;</li>
+        <li>&lt;input type="date" id="Date" name="Date" required&gt;</li></li></ul>
+    <li class="description">For checkbox<ul class="code">
+        <li>&lt;input type="checkbox" id="checkRule" name="checkRule"&gt;</li>
+        <li>&lt;input type="checkbox" id="checkRule" name="checkRule" required&gt;</li></li></ul>
+    <li class="description">For file uploading<ul class="code">
+        <li>&lt;input type="file" id="pdfFile" name="pdfFile" accept=".pdf"&gt;</li>
+        <li>&lt;input type="file" id="multiType" name="multiType" accept=".pdf, .jpg, .png"&gt;</li></li></ul>
+    <li class="description">For reset button<ul class="code">
+        <li>&lt;input type="reset" id="Reset" value="Reset"&gt;</li></li></ul>
+    <li class="description">For reset button<ul class="code">
+        <li>&lt;input type="submit" id="Submit" value="Submit"&gt;</li></li></ul>
+    </ul>
+
+    <h4>Select from menu</h4> 
+    <p class="description">Pick one from a drop-down menu. <br>
+        Define the menu as:</p> <ul class="code">
+    <li>&lt;select id="aMenu" name="aMenu"&gt; ... &lt;/select&gt;</li> </ul>
+    <p class="description">And, in the <span class="code">...</span>, 
+         add each <span class="code">option</span> available for user to pick.</p> <ul class="code">
+    <li>&lt;option value="opt1"&gt; Text for option 1 &lt;/option&gt;</li>
+    <li>&lt;option value="opt2"&gt; Text for option 2 &lt;/option&gt;</li> </ul> 
+
+
+    <!--FORM EXAPMPLE-->
+    <hr><hr> <br>
+    <h2 style="font-style:italic; text-align:center; background-color: #443d3d; color:#d8cfcf">FORM EXAMPLE</h2> <br>
+    <hr><hr> <br>
+
+
+    <form action="rental_form.php" method="POST">
+
+        <div>
+            <h3 style="font-style: italic;">Driver's personal data</h3> <hr>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Jon" required>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" required>    
+        </div> <br>
+    
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" required>
+        </div> <br>
+    
+        <div>
+            <label for="license">Have you ever rented a car before?</label>
+            <input type="text" id="license" name="license" required>
+        </div> <br>
+    
+        <div>
+            <label for="XP">Years of driving experience:</label>
+            <select id="XP" name="XP">
+                <option value="New">New to driving</option>
+                <option value="1_3">1-3 years</option>
+                <option value="4_10">4-10 years</option>
+                <option value="10plus">10+ years</option>
+            </select>
+        </div> <br>
+    
+        <div>
+            <label for="BeginDate">First day of rental:</label>
+            <input type="date" id="BeginDate" name="BeginDate" required> <br>
+            <label for="EndDate">Last day of rental:</label>
+            <input type="date" id="LastDate" name="LastDate" required>
+        </div> <br>
+
+        <div>
+
+            <label for="reason">Reason of rental:</label> <br>
+            <textarea id="reason" name="reason" rows="4" cols="50" placeholder="Enter your intentions here."></textarea>
+        </div> <br>
+
+        <div>
+            <h3 style="font-style:italic;">Documentation</h3> <hr>
+            <label for="pdfFile">Upload ID <sub>(acc: .pdf, .jpg, .png)</sub>:</label>
+            <input type="file" id="pdfFile" name="pdfFile" accept=".pdf, .jpg, .png">  <br><br>
+            <label for="pdfFile">Upload License <sub>(acc: .pdf)</sub>:</label>
+            <input type="file" id="multiType" name="multiType" accept=".pdf">
+        </div> <br>
+    
+        <div>
+            <h3 style="font-style: italic;">Payment</h3> <hr>
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="giftcard">Gift Card/ Coupon</option>
+                <option value="visa">Cash (on day of rental)</option>
+            </select>
+        </div> <br>
+    
+
+        <div style="font-style:italic; color:rgb(3, 3, 160);">
+            <h3 style="color:black;">Consent and Responsibility taking</h3> <hr>
+            <label for="consent">Consent to Take Responsibility for Accidents:</label>
+            <input type="checkbox" id="consent" name="consent" required> <br>
+            <label for="subscribe">Subscribe to Updates:</label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="1">
+        </div> <br>
+    
+        <div>
+            <hr><hr> <br><br>
+            <input type="reset" value="Reset" style="width:30%; background-color: rgb(140, 129, 129); color:white;"><br><br>
+            <input type="submit" value="S U B M I T" id="submitButton">
+        </div> <br>
+    
+    </form>
+    
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
