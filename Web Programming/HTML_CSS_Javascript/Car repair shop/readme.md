@@ -1,4 +1,5 @@
 CAR REPAIR SHOP (WEBSITE)
+-------------------------------------------
 
 This is a download-as-a-whole folder of a project of mine simulating a Car Repair Shop Website (greek).
 It is not connected to a real server, nor does it store on any data base your information. 
