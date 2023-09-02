@@ -1,4 +1,5 @@
 RENT A DRAGON (WEBSITE)
+-----------------------------------------------
 
 This is a website to rent a dragon!
 
