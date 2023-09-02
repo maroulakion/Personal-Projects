@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <title>Card Payment Information</title>
+    
+</head>
+<body id="background_image">
+    <div class="payment-form" style="background-color: rgba(255, 255, 255, 0.7);">
+        <h2>Card Payment Information</h2>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <div class="form-group" id="cardStyle">
+                <label for="cardNumber">Card Number (16 digits):</label>
+                <input type="text" id="cardNumber" name="cardNumber" required 
+                maxlength="16" pattern="[0-9]+" title="Please enter a 16-digit number">
+            </div>
+            <div class="form-group" id="cardStyle">
+                <label for="cardHolderName">Card Holder's Name:</label>
+                <input type="text" id="cardHolderName" name="cardHolderName" required>
+            </div>
+            <div class="form-group" id="cardStyle">
+                <label for="cvv">CVV (3 digits):</label>
+                <input type="text" id="cvv" name="cvv" required 
+                maxlength="3" pattern="[0-9]+" title="Please enter a 3-digit number">
+            </div>
+            <div class="form-group" id="cardStyle">
+                <label for="expDate">Expiration Date (MM/YYYY):</label>
+                <input type="month" id="expDate" name="expDate" required>
+            </div><br>
+            <div id="cardStyle">
+                <button type="submit">Submit Payment</button>
+            </div>
+        </form>
+        <p id="thankYouMessage" style="display:none; font-size: 30px; color:rgb(236, 170, 122); background-color: rgb(67, 0, 0); margin-top:0; padding:10px;">
+            Thank you for your payment!</p>
+    </div>
+
+    <script>
+        function validateForm() {
+            var cardNumber = document.getElementById('cardNumber').value;
+            var cardHolderName = document.getElementById('cardHolderName').value;
+            var cvv = document.getElementById('cvv').value;
+            var expDate = document.getElementById('expDate').value;
+
+            var currentYear = new Date().getFullYear();
+            var selectedYear = new Date(expDate).getFullYear();
+
+            if (cardNumber.length !== 16) {
+                alert('Card number must be exactly 16 digits.');
+                return false;
+            }
+
+            if (cvv.length !== 3) {
+                alert('CVV must be exactly 3 digits.');
+                return false;
+            }
+
+            if (isNaN(cardNumber) || isNaN(cvv) || cardNumber <= 0 || cvv <= 0) {
+                alert('Card number and CVV must be positive numbers.');
+                return false;
+            }
+
+            if (selectedYear < currentYear || selectedYear > currentYear + 5) {
+                alert('Invalid expiration year. Please select a year within the next 5 years.');
+                return false;
+            }
+
+            document.getElementById('thankYouMessage').style.display = 'block';
+            return false;
+        }
+    </script>
+</body>
+</html>

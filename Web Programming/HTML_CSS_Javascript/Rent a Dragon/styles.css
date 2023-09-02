@@ -1,0 +1,109 @@
+/* CSS ON ELEMENTS */
+body {
+    font-family: Arial, sans-serif;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#cardStyle input{
+    width: 90%;
+    padding: 3px;
+    border: 3px solid #6f0000;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+}
+
+input[type="text"], input[type="number"], input[type="month"],
+input[type="email"], input[type="date"], input[type="file"], textarea {
+    width: 40%;
+    padding: 5px;
+    border: 3px solid #6f0000;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 100px;
+}
+
+select {
+    margin: 5px;
+}
+
+form {
+    padding: 10px;
+    margin: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* IDs */
+
+/* Background faded image */
+#background_image {
+    background-image: url("./assets/many_dragons_sunset.jpeg");   
+    background-size: cover; 
+    background-repeat: no-repeat; /* Adjust as needed */
+    background-attachment: fixed; /* Adjust as needed */
+    /* background-color: rgba(255, 255, 255, 0.5); 50% opacity white background */
+}
+
+#submitButton{
+    color: white;
+    background-color: #534848;
+    border-radius: 8px;
+    width: 100%;
+    height: 50px; 
+}
+
+#topOfPage {
+    font-style:italic;
+    background-image: url("./assets/many_dragons_sunset.jpeg");
+    color:#d8cfcf;
+    max-width: 100%;
+    height: 200px;
+    text-align: center;
+    font-size: 28px;
+}
+
+
+/* CLASSES */
+
+.innerSection {
+    font-style:italic;
+    color:rgb(8, 90, 8);
+    background-color: #d8cfcf;
+}
+
+
+.payment-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
