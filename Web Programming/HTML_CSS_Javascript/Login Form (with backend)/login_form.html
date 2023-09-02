@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles_login_form.css">
+    
+    <title>Login Form</title>
+</head>
+<body>
+    <!--
+    <form action="process_login_POST.php" method="POST" onsubmit="return validateForm()">
+    -->
+    <form action="process_login_GET.php" method="GET" onsubmit="return validateForm()" 
+     id="log_form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (username.length < 8) {
+                alert('Username must be at least 8 characters.');
+                return false;
+            }
+
+            // Simple email validation using a regular expression
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailPattern)) {
+                alert('Invalid email address.');
+                return false;
+            }
+
+            if (password === '') {
+                alert('Password cannot be empty.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

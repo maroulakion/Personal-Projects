@@ -1,0 +1,55 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7f6e1;
+}
+
+#log_form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #b7dbb9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 95%;
+    padding: 2%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: #18b300;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #009505;
+    color: #fff;
+    padding: 10px;
+    border: 3px;
+    border-color: #09a001;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, 
+input[type="email"]:hover {
+    background-color: #c9ecbe;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #036800;
+}
+
