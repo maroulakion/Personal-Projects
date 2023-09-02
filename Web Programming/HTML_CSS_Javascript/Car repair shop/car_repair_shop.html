@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Επιχείρηση Συνεργείο Αυτοκινήτων</title>
+</head>
+<body>
+    <header>
+        <h1>Συνεργείο Αυτοκινήτων - ο Μπάμπης</h1>
+        <nav>
+            <ul>
+                <li><a href="car_repair_shop.html">Αρχική</a></li>
+                <li><a href="appointment.html">Ραντεβού</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="right-container">
+            <article>
+                <h2>Καλώς ήρθατε στην Επιχείρησή μας!</h2>
+                <p>Καλώς ήρθατε στην επιχείρηση μας για συνεργείο αυτοκινήτων. 
+                Είμαστε εδώ για να σας εξυπηρετήσουμε.</p>
+            </article>
+        </div>
+
+
+        <div id="background_image" class="container">
+            <div class="left-container">
+                <form onsubmit="checkLogin();">
+                    <label for="employeeCode">Employee Code:</label>
+                    <input type="text" id="employeeCode" name="username" required>
+            
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+            
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    
+
+            <br><br>
+            <div class="right-container">
+                <article>
+                    <div class="text">
+                        <h2>Λίγα λόγια για εμάς</h2>
+                        <p>Το "Συνεργείο Αυτοκινήτων - ο Μπάμπης" ιδρύθηκε από τον ομώνυμο ιδιωκτήτη το 1987, 
+                            και εκ τότε συνεχίζει να καλύπτει τις ανάγκες δεκάδων πελατών καθημερινά. <br> 
+                            Τοποθετημένο στο κέντρος της 
+                            <b><u>Θεσσαλονίκης (Ουτοπίας 99)</u></b> 
+                            και καταρτισμένο με έμπειρους 
+                            τεχνικούς, μηχανικούς και αυτοκινητο-γνώμονες, είμαι εδώ για να αντιμετωπίσουμε κάθε είδος 
+                            απαίτηση, ζημίας, ή αναβάθμισης επιθυμείτε!
+                        </p> 
+                        <p>Επικοινωνήστε μαζί μας στο 
+                            <span style="color:blue;"">+3069 696 96969</span></p>
+                    </div>
+                </article>
+                <div class="image">
+                    <img src="assets/checking_car.jpeg">
+                </div>
+            </div>
+            <br><br>
+        </div>    
+        
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="car_repair_shop.html">Αρχική</a>
+            <a href="appointment.html">Ραντεβού</a>
+        </div>
+        <div class="employee-info">
+            <p>Αριθμός Μητρώου: ics22008</p>
+            <p>Όνομα: Maria Orfanaki</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkLogin() {
+            var employeeCode = document.getElementById('employeeCode').value;
+            var password = document.getElementById('password').value;
+    
+            if (employeeCode !== '' && password !== '') {
+                window.alert('Επιτυχής σύνδεση');
+            } else {
+                window.alert('Δεν συμπληρώσατε τους κωδικούς');
+            }
+        }
+    </script>
+</body>
+</html>

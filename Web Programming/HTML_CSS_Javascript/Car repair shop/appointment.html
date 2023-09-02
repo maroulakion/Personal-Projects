@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ραντεβού</title>
+</head>
+<body id="background_image">
+    <header>
+        <h1>Ραντεβού</h1>
+        <nav>
+            <ul>
+                <li><a href="car_repair_shop.html">Αρχική</a></li>
+                <li><a href="appointment.html">Ραντεβού</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Συνδεθείτε για να κλείσετε ραντεβού</h2>
+            <div style="width:30%;">
+                <form id="appointmentForm" onsubmit="return checkForm();">
+                    <label for="fullName">Ονοματεπώνυμο:</label>
+                    <input type="text" id="fullName" name="fullName" required minlength="8"><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <span style="width:80%; align-self: left; display:inline;">
+                        <span style="margin: 10px;">
+                            <input type="submit" value="Σύνδεση"></span>
+                        <span style="margin: 10px;">
+                            <input type="reset" value="Καθάρισμα"></span>
+                    </span>
+                </form>
+
+                <p id="successMessage"></p>
+            </div>
+        </article>
+        
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="car_repair_shop.html">Αρχική</a>
+            <a href="appointment.html">Ραντεβού</a>
+        </div>
+        <div class="employee-info">
+            <p>Αριθμός Μητρώου: ics22008</p>
+            <p>Όνομα: Maria Orfanaki</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkForm() {
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var successMessage = document.getElementById('successMessage');
+
+            if (fullName.length >= 8 && validateEmail(email)) {
+                successMessage.textContent = 'Επιτυχής Καταχώρηση';
+                window.location.replace('times.html');
+                // 'times.html?fullName=' + fullName + '&email=' + email;
+            } else {
+                successMessage.textContent = '';
+                window.alert('Παρακαλώ συμπληρώστε τα στοιχεία σας σωστά.');
+            }
+        }
+
+        function validateEmail(email) {
+            var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return pattern.test(email);
+        }
+    </script>
+</body>
+</html>
+
