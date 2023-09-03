@@ -1,0 +1,50 @@
+
+/* UNIVERSAL CSS */
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    text-align:center;
+    font-size: 38px;
+    color:aliceblue;
+    background-color: rgb(134, 9, 9);
+    border-radius: 7px;
+    padding-bottom: 35px;
+    padding-top: 20px;
+    letter-spacing: 2px;
+    word-spacing: 3px;   
+    margin-bottom: 30px;
+}
+
+footer {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    font-style: italic;
+    color:aliceblue;
+    background-color: rgb(67, 42, 165);
+    border-radius: 7px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    word-spacing: 3px;
+    margin-top: 20px;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], button {
+    background-color: rgb(18, 153, 0);
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    color: aliceblue;
+    margin: 20px;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
+    background-color: rgb(150, 234, 120);   
+} 
