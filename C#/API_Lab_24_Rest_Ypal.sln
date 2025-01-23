@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Lab_24_Rest_Ypal", "API_Lab_24_Rest_Ypal\API_Lab_24_Rest_Ypal.csproj", "{7907DF12-BD7F-4C53-97C7-7EA5755E600B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7907DF12-BD7F-4C53-97C7-7EA5755E600B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7907DF12-BD7F-4C53-97C7-7EA5755E600B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7907DF12-BD7F-4C53-97C7-7EA5755E600B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7907DF12-BD7F-4C53-97C7-7EA5755E600B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {069087C2-C39B-416B-8B76-CC833CE21548}
+	EndGlobalSection
+EndGlobal
